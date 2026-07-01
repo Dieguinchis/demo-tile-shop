@@ -1,6 +1,5 @@
 import { CONTACT, NAV_LINKS, getWhatsappLink } from '../constants/site';
 import {
-  BestTileIcon,
   InstagramIcon,
   FacebookIcon,
   WhatsappIcon,
