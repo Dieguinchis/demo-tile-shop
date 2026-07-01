@@ -1,0 +1,93 @@
+.inspiration {
+  background: var(--color-paper);
+  padding-bottom: clamp(72px, 10vw, 160px);
+}
+
+.inspiration__strip {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 12px var(--gutter) 64px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.inspiration__strip::-webkit-scrollbar {
+  display: none;
+}
+
+.inspiration__strip:active {
+  cursor: grabbing;
+}
+
+.amb-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: min(66vw, 420px);
+  height: clamp(320px, 42vw, 480px);
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px -15px rgba(23, 20, 15, 0.2);
+  transition: transform 0.5s var(--ease-premium), box-shadow 0.5s var(--ease-premium);
+}
+
+.amb-card--even {
+  margin-top: 56px;
+}
+
+.amb-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-premium);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.amb-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(23, 20, 15, 0.35);
+}
+
+.amb-card:hover img {
+  transform: scale(1.06);
+}
+
+.amb-card figcaption {
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+  color: var(--color-porcelain);
+  background: rgba(23, 20, 15, 0.65);
+  padding: 8px 16px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  border-radius: 2px;
+  pointer-events: none;
+  user-select: none;
+  border: 1px solid rgba(250, 250, 247, 0.1);
+}
+
+@media (max-width: 640px) {
+  .inspiration__strip {
+    gap: 16px;
+    padding-bottom: 24px;
+  }
+  .amb-card {
+    width: 280px;
+    height: 360px;
+  }
+  .amb-card--even {
+    margin-top: 0;
+  }
+}
+

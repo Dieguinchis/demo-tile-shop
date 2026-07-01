@@ -1,0 +1,149 @@
+.cta {
+  background: var(--color-basalt);
+  color: var(--color-porcelain);
+}
+
+.cta__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(5vw, 3vw, 5vw);
+  align-items: start;
+}
+
+.cta__intro .display-xl {
+  color: var(--color-porcelain);
+  margin-top: 20px;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+}
+.cta__intro .body-lg { color: rgba(250, 250, 247, 0.72); margin-top: 24px; max-width: 44ch; }
+
+/* WhatsApp button: use light variant style on dark bg */
+.cta__whatsapp {
+  margin-top: 40px;
+}
+.cta__whatsapp.btn--primary {
+  background: var(--color-porcelain);
+  color: var(--color-basalt);
+  border-color: var(--color-porcelain);
+}
+.cta__whatsapp.btn--primary:hover {
+  background: var(--color-paper);
+  border-color: var(--color-paper);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(250, 250, 247, 0.25);
+}
+
+.cta__form {
+  background: rgba(250, 250, 247, 0.04);
+  border: 1px solid rgba(250, 250, 247, 0.16);
+  padding: clamp(28px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.cta__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cta__field label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 247, 0.6);
+}
+
+.cta__field input,
+.cta__field textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 247, 0.3);
+  padding: 10px 2px;
+  color: var(--color-porcelain);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color var(--dur-fast) var(--ease-premium);
+}
+
+.cta__field input::placeholder,
+.cta__field textarea::placeholder { color: rgba(250, 250, 247, 0.35); }
+
+.cta__field input:focus,
+.cta__field textarea:focus {
+  outline: none;
+  border-bottom-color: var(--color-porcelain);
+}
+
+.cta__submit { align-self: flex-start; margin-top: 4px; }
+.cta__submit.btn--secondary {
+  color: var(--color-porcelain);
+  border-color: rgba(250, 250, 247, 0.5);
+}
+.cta__submit.btn--secondary:hover {
+  background: var(--color-porcelain);
+  color: var(--color-basalt);
+  border-color: var(--color-porcelain);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(250, 250, 247, 0.2);
+}
+
+.cta__success {
+  color: var(--color-stone);
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .cta__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .cta__intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta__intro .body-lg {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 56ch;
+  }
+
+  .cta__whatsapp {
+    margin-top: 32px;
+  }
+
+  .cta__form {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .cta__intro .display-xl {
+    font-size: clamp(1.6rem, 5.5vw, 2.4rem);
+  }
+
+  .cta__whatsapp,
+  .cta__submit {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cta__submit {
+    align-self: stretch;
+  }
+
+  .cta__form {
+    padding: 24px 20px;
+  }
+}
+

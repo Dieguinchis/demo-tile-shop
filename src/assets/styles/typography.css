@@ -1,0 +1,140 @@
+/* ---------- Typography scale ---------- */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--color-clay);
+  display: inline-block;
+}
+
+.display-xl {
+  font-family: var(--font-display);
+  font-weight: 340;
+  letter-spacing: -0.01em;
+  line-height: 0.98;
+  font-size: clamp(2.6rem, 6.4vw, 6.4rem);
+  color: var(--color-basalt);
+}
+
+.display-lg {
+  font-family: var(--font-display);
+  font-weight: 360;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+  color: var(--color-basalt);
+}
+
+.display-md {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.08;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  color: var(--color-basalt);
+}
+
+.body-lg {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--color-ash);
+}
+
+.body-md {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-ash);
+}
+
+.body-sm {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-ash);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ash);
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.section {
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+  position: relative;
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 720px;
+  margin-bottom: clamp(48px, 6vw, 88px);
+}
+
+.section-head.center {
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hairline {
+  border: none;
+  border-top: 1px solid var(--color-line);
+  margin: 0;
+}
+
+.grain-divider {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  background: var(--color-line);
+  overflow: visible;
+}
+
+/* reveal-on-scroll base state; JS(gsap) animates to visible */
+.reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
