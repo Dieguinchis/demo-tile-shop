@@ -88,7 +88,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container footer__bottom">
+      <div className="footer__bottom">
         <span className="caption">© {year} {CONTACT.brandFull}. Todos los derechos reservados.</span>
       </div>
     </footer>

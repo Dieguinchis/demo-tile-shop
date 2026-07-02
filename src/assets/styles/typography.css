@@ -20,6 +20,14 @@
   display: inline-block;
 }
 
+.section-head.center .eyebrow::after {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--color-clay);
+  display: inline-block;
+}
+
 .display-xl {
   font-family: var(--font-display);
   font-weight: 340;

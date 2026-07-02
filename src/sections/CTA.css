@@ -108,6 +108,14 @@
     align-items: center;
   }
 
+  .cta__intro .eyebrow::after {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--color-clay);
+    display: inline-block;
+  }
+
   .cta__intro .body-lg {
     margin-left: auto;
     margin-right: auto;
