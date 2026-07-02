@@ -147,7 +147,7 @@ export default function Inspiration() {
         onTouchCancel={handleTouchEnd}
       >
         {tripledAmbients.map((amb, index) => {
-          const isEven = (index % ambients.length) % 2 === 1;
+          const isEven = index  % 2 === 1;
           return (
             <figure
               className={`amb-card reveal ${isEven ? 'amb-card--even' : ''}`}

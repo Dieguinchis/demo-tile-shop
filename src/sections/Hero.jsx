@@ -48,8 +48,7 @@ export default function Hero() {
           '-=0.9'
         )
         .from('.hero-sub', { opacity: 0, y: 16, duration: 0.8 }, '-=0.5')
-        .from('.hero-actions', { opacity: 0, y: 16, duration: 0.8 }, '-=0.55')
-        .from('.navbar', { opacity: 0, y: -12, duration: 0.6 }, '-=1.4');
+        .from('.hero-actions', { opacity: 0, y: 16, duration: 0.8 }, '-=0.55');
 
       // Subtle continuous parallax on the background image
       gsap.to(bgRef.current, {
